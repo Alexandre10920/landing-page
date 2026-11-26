@@ -127,3 +127,86 @@ body{
 .card p {
     color: #6b7280;
 }
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #f3f4f6;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #4f46f5;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #6b7280;
+}
+
+.depoimentos {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.depoimentos h2 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 3rem;
+}
+
+.depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem;
+}
+
+.depoimento {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 280px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.depoimento:hover {
+    transform: translateY(-5px);
+}
+
+.depoimento img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.depoimento p {
+    color: #6b7280;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+.depoimento span {
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
