@@ -69,7 +69,7 @@ body{
 }
 
 .hero-imagem img {
-    max-width: 97%;
+    max-width:90%;
     height: auto;
 }
 
@@ -128,39 +128,29 @@ body{
     color: #6b7280;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
+.depoimentos {
+    padding: 4rem 2rem;
+    background-color: #f9fafb;
+    text-align: center
 }
 
-.card {
+.depoimento {
     background-color: #f3f4f6;
+    min-height: 300px;
     padding: 2rem;
     border-radius: 1rem;
     max-width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h3 {
-    color: #4f46f5;
-    margin-bottom: 1rem;
-}
-
-.card p {
-    color: #6b7280;
-}
-
-.depoimentos {
-    padding: 4rem 2rem;
-    background-color: #ffffff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.depoimento:hover {
+    transform: translateY(-5px);
 }
 
 .depoimentos h2 {
@@ -169,25 +159,25 @@ body{
     margin-bottom: 3rem;
 }
 
-.depoimentos {
+.depoimentos-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: rem;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.depoimento {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 280px;
-    flex: 1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.depoimento p {
+    color: #6b7280;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-.depoimento:hover {
-    transform: translateY(-5px);
+.depoimento span {
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .depoimento img {
@@ -195,18 +185,132 @@ body{
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 25px;
 }
 
-.depoimento p {
+.exemplos {
+    padding: 4rem 2rem;
+    background-color: #f9fafb;
+    text-align: center
+}
+
+.exemplo-card {
+    background-color: #f3f4f6;
+    min-height: 300px;
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.exemplo-card:hover {
+    transform: translateY(-5px);
+}
+
+.exemplos h2 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 3rem;
+}
+
+.exemplos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.exemplo-card p {
     color: #6b7280;
     font-style: italic;
     line-height: 1.6;
-    margin-bottom: 1.5rem;
+    margin-bottom: 25px;
 }
-.depoimento span {
+
+.exemplo-card span {
     color: #4f46e5;
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+.exemplo-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 25px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle{
+        display: flex;
+    }
+    .navbar {
+        flex-wrap: wrap;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background-color: #4f46e5;
+        padding: 1rem 2rem;
+        display: none;
+        animation: slideDown 0.3s ease forwards;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 1;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: transform 0.3 ease, opacity 0.3 ease;
+}
+
 
